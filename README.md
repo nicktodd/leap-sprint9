@@ -40,7 +40,7 @@ pattern as every previous sprint.
 
 | # | Module | Lab |
 |---|---|---|
-| 1 | The Full Stack So Far & Where Angular Fits | _coming soon_ |
+| 1 | The Full Stack So Far & Where Angular Fits | [labs/01-the-full-stack-so-far-and-where-angular-fits/README.md](labs/01-the-full-stack-so-far-and-where-angular-fits/README.md) |
 | 2 | Angular Fundamentals: Framework Overview & What Makes It Different from React | _coming soon_ |
 | 3 | Angular Project Structure, Dev Server & Build Tooling | _coming soon_ |
 | 4 | Components & Templates: Standalone Components & Signals | _coming soon_ |
