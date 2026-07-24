@@ -26,12 +26,23 @@ proved that service accepts unchanged.
 - Forms replace hand-typed JSON request bodies
 - A JWT interceptor and route guard replace manually pasting a bearer token into every request
 
-## Why Angular, and Why No TypeScript Refresher
+## Why Day 1 Is HTML/CSS/Browser JS, Not Angular
+
+Sprint 8 taught JavaScript and TypeScript entirely in a Node.js context — no HTML, no
+CSS, no DOM, no browser. Without a day spent on the raw platform first, Module 8
+(Components & Templates) would be the first time anyone had touched an HTML tag or a
+stylesheet. Modules 1-4 build a static page, style it, make it interactive, and call a
+real backend with `fetch()` — all by hand, no framework — so that when Angular is
+introduced in Module 6, every abstraction it offers (components, `HttpClient`, reactive
+forms) has something concrete to be an improvement *over*, not a new set of ideas
+learned in a vacuum.
+
+## Why No TypeScript Refresher
 
 TypeScript was taught properly in Sprint 8, so this sprint doesn't re-teach it —
 Angular-specific TypeScript usage (decorators, typed component properties, generics in
 `HttpClient`) is folded into the components and HTTP modules where it naturally comes up,
-rather than taught as a separate block. Module 12 combines the login form, the JWT
+rather than taught as a separate block. Module 15 combines the login form, the JWT
 interceptor, and the route guard into one module rather than three, because a login form
 without the interceptor and guard is non-functional — splitting them apart would mean
 testing incomplete pieces at every step instead of one working flow.

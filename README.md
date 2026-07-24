@@ -9,8 +9,10 @@ with Angular**, week 9 of the Fidelity LEAP graduate programme.
   versions) and npm
 - Angular CLI (`npm install -g @angular/cli`, or use `npx @angular/cli`)
 - TypeScript from Sprint 8 (interfaces, generics, decorators) — assumed, not re-taught
+- No prior HTML, CSS, or browser JavaScript experience assumed — Day 1 builds this from
+  zero, before Angular is introduced at all
 - A working checkout of Sprint 6/7's mission service (Spring Boot) and Sprint 8's
-  `sprint8-auth-service` (NestJS) — Modules 7, 8, and 12 make real calls against both
+  `sprint8-auth-service` (NestJS) — Modules 4, 5, 11, and 12 make real calls against both
 - Docker, and the same `sprint6-postgres` container used in Sprint 8, Module 15
 - GitHub Copilot Chat (continuing as a learning aid)
 
@@ -20,6 +22,10 @@ By the end of Sprint 8 the mission had a complete backend: Postgres (Sprint 3) b
 Spring Boot service (Sprint 5/6/7) authenticated by a real NestJS auth service (Sprint 8),
 proven to work end to end with `curl`. Sprint 9 builds the piece that turns that into
 something a person can actually use: an Angular front end. See `shared/mission-brief.md`.
+
+Sprint 8 taught JavaScript and TypeScript entirely in a Node.js context — no HTML, no CSS,
+no DOM, no browser. Day 1 of this sprint (Modules 1-4) closes that gap with real,
+hands-on HTML/CSS/browser-JS work before Angular is introduced in Module 6.
 
 ## Structure
 
@@ -40,21 +46,23 @@ pattern as every previous sprint.
 
 | # | Module | Lab |
 |---|---|---|
-| 1 | The Full Stack So Far & Where Angular Fits | [labs/01-the-full-stack-so-far-and-where-angular-fits/README.md](labs/01-the-full-stack-so-far-and-where-angular-fits/README.md) |
-| 2 | Angular Fundamentals: Framework Overview & What Makes It Different from React | _coming soon_ |
-| 3 | Angular Project Structure, Dev Server & Build Tooling | _coming soon_ |
-| 4 | Components & Templates: Standalone Components & Signals | _coming soon_ |
-| 5 | Services & Dependency Injection in Angular | _coming soon_ |
-| 6 | HTTP Communication: HttpClient, Observables & Error Handling | _coming soon_ |
-| 7 | Connecting to the Spring Boot Backend: First Real API Call | _coming soon_ |
-| 8 | OpenAPI-Generated API Clients | _coming soon_ |
-| 9 | Reactive Forms: Controls, Validation & Dynamic Forms | _coming soon_ |
-| 10 | Form-to-API Patterns: Submitting, Handling Responses & Displaying Errors | _coming soon_ |
-| 11 | Routing Fundamentals: Routes, Lazy Loading & Navigation | _coming soon_ |
-| 12 | Building Authenticated Flows: Login, JWT Interceptors & Route Guards | _coming soon_ |
-| 13 | UX Clarity for Non-Technical Audiences: Error Messages & Loading States | _coming soon_ |
-| 14 | Testing Angular: Unit Tests & End-to-End Tests with Playwright | _coming soon_ |
-| 15 | Mission Build: Wiring Up Remaining Features & Sprint 9 Wrap-up | _coming soon_ |
+| 1 | HTML Fundamentals: Structure, Semantic Elements & Forms | _coming soon_ |
+| 2 | CSS Fundamentals: Selectors, the Box Model & Layout | _coming soon_ |
+| 3 | JavaScript in the Browser: The DOM, Events & the Window Object | _coming soon_ |
+| 4 | Fetch & Browser HTTP: Calling a Real API Without a Framework | _coming soon_ |
+| 5 | The Full Stack So Far & Where Angular Fits | [labs/05-the-full-stack-so-far-and-where-angular-fits/README.md](labs/05-the-full-stack-so-far-and-where-angular-fits/README.md) |
+| 6 | Angular Fundamentals: Framework Overview & What Makes It Different from React | _coming soon_ |
+| 7 | Angular Project Structure, Dev Server & Build Tooling | _coming soon_ |
+| 8 | Components & Templates: Standalone Components & Signals | _coming soon_ |
+| 9 | Services & Dependency Injection in Angular | _coming soon_ |
+| 10 | HTTP Communication: HttpClient, Observables & Error Handling | _coming soon_ |
+| 11 | Connecting to the Spring Boot Backend: First Real API Call | _coming soon_ |
+| 12 | OpenAPI-Generated API Clients | _coming soon_ |
+| 13 | Reactive Forms: Building, Submitting & Handling Responses | _coming soon_ |
+| 14 | Routing Fundamentals: Routes, Lazy Loading & Navigation | _coming soon_ |
+| 15 | Building Authenticated Flows: Login, JWT Interceptors & Route Guards | _coming soon_ |
+| 16 | Testing Angular: Unit Tests & End-to-End Tests with Playwright | _coming soon_ |
+| 17 | Mission Build: Wiring Up Remaining Features, UX Review & Sprint 9 Wrap-up | _coming soon_ |
 
 ## Support
 

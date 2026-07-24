@@ -1,4 +1,4 @@
-# Module 1 Lab — The Full Stack So Far & Where Angular Fits
+# Module 5 Lab — The Full Stack So Far & Where Angular Fits
 
 ## Objectives
 
@@ -6,7 +6,8 @@ By the end of this lab you will have:
 
 - Traced a single request end to end through every layer of the mission stack, including
   the Angular app that doesn't exist yet
-- Identified exactly which existing piece each future Angular module will build
+- Identified exactly which existing piece each future Angular module will build, and
+  which parts of Modules 1-4's hand-written HTML/CSS/JS each one replaces
 
 ## Format
 
@@ -15,9 +16,11 @@ whiteboard, or a shared doc) is the deliverable.
 
 ## The Scenario
 
-A trader opens `mission-ui` (the Angular app you'll spend this sprint building), logs in,
-and submits an order. Today's demo just proved every box in that flow except Angular
-itself already works, for real, against a real Postgres row.
+A trader opens `mission-ui` (the Angular app you'll spend the rest of this sprint
+building), logs in, and submits an order. Modules 1-4 already built a rough version of
+"logging in" by hand — a static HTML form, some CSS, and a `fetch()` call to
+`sprint8-auth-service`. Today's demo proved every box past that point (the mission
+service, Postgres) already works too, for real, against a real Postgres row.
 
 ## Task
 

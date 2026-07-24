@@ -1,15 +1,22 @@
-# Module 1 Demo Guide — The Full Stack So Far & Where Angular Fits
+# Module 5 Demo Guide — The Full Stack So Far & Where Angular Fits
 
 **Duration:** 10 minutes
 **Prerequisite:** `sprint6-postgres` running with the Sprint 3 schema, Sprint 6/7's mission
-service, and Sprint 8's `sprint8-auth-service`.
+service, and Sprint 8's `sprint8-auth-service`. Modules 1-4 (HTML, CSS, DOM, Fetch)
+complete — this module assumes their static page and its `fetch()` call to
+`sprint8-auth-service` already exist.
 
-This module has no new code, no new service, and no Angular anywhere yet. Say that
-explicitly: the whole point is proving the other three boxes already work, together,
-for real — so learners spend the rest of the sprint building the ONE piece that's
-missing, not wondering whether the pieces it will call actually function.
+This module introduces no new code and no new service. Say that explicitly: the whole
+point is closing out Day 1 by proving the three boxes behind what learners just built
+by hand — Postgres, the mission service, the auth service — already work, together, for
+real, and then naming exactly what Angular is about to take over from Modules 1-4's
+manual HTML/CSS/JS.
 
-## The Whole Stack, End to End (10 min)
+## From M4's fetch() to the Whole Stack (10 min)
+
+Module 4's lab called `sprint8-auth-service`'s real `/auth/login` with `fetch()` and
+rendered the token (or a rejected-login message) into the DOM by hand. That was one
+hop of a much longer chain. Today's demo runs the WHOLE chain, live:
 
 ```bash
 # No token
@@ -76,23 +83,27 @@ Draw the picture live: **Browser → Angular app → sprint8-auth-service → mi
 - **Postgres**: Sprint 3. Untouched since.
 - **Mission service**: Sprint 5/6/7. Untouched since Sprint 6, Module 13.
 - **sprint8-auth-service**: Sprint 8. Untouched since Sprint 8, Module 15.
-- **Angular app**: doesn't exist. Everything from here to the end of the sprint builds
-  it.
+- **The Angular app**: doesn't exist. Modules 1-4's static page, hand-written CSS, and
+  manual DOM/`fetch()` code are the only "front end" that exists right now.
 
-Map the rest of the sprint onto that one new box, briefly: components and signals hold
-what's on screen (Module 4); services and `HttpClient` make the calls just demonstrated,
-from code instead of a terminal (Modules 5-7); an OpenAPI-generated client replaces the
-hand-written version (Module 8); reactive forms replace typing JSON by hand (Modules
-9-10); routing gives the app more than one screen (Module 11); and Module 12 rebuilds
-this exact `curl` sequence — login, attach token, call a protected route — as real,
-running Angular code.
+Name specifically what Angular replaces, module by module: components and signals
+replace M3's manual `document.querySelector`/DOM-update code (Module 8); services and
+`HttpClient` replace M4's raw `fetch()` call (Modules 9-10); an OpenAPI-generated client
+replaces a hand-written HTTP call entirely (Module 12); reactive forms replace M1's
+plain HTML form (Module 13); routing gives the app more than one screen (Module 14);
+and Module 15 rebuilds this exact login-then-protected-request sequence — the same
+sequence M4 already did by hand once — as real, running Angular code, with an
+interceptor and a guard doing automatically what a learner would otherwise have to
+remember to do on every request.
 
 ## Key message
 
 Nothing in this stack is aspirational. Every claim in `shared/mission-brief.md` about
-what already works is one this demo just proved, live, with real output — Angular's job
-this sprint is narrower and more concrete because of that: put a face on something that
-already works, not build something new and hope it works.
+what already works is one this demo just proved, live, with real output — and M1-M4
+already proved a browser CAN talk to it, by hand. Angular's job for the rest of this
+sprint is narrower and more concrete because of that: replace hand-written HTML, CSS,
+and `fetch()` calls with something that scales past one page and one request, not
+build something new and hope it works.
 
 ## Transition to the Lab
 
