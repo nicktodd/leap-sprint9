@@ -9,10 +9,20 @@ comparison or contrast.
 
 ## Part 0: What Is HTML? (4 min)
 
-HTML (HyperText Markup **L**anguage) describes the *structure and content* of a page —
+HTML (HyperText Markup Language) describes the *structure and content* of a page —
 headings, paragraphs, forms, links. Not how it looks (CSS, Module 2) and not how it
 behaves (JavaScript, Module 3). A browser reads an HTML file and turns it into the page
 on screen.
+
+The "HyperText" half of the name is the `<a href="...">` element — a link, clickable
+text or an image that jumps to another page. It's what made the web the *web* (pages
+linked to other pages) rather than just a way to format a single document. Today's
+login page doesn't happen to need one, but it's worth naming explicitly since it's
+where HTML's name comes from:
+
+```html
+<a href="https://example.com">a link</a>
+```
 
 **Elements, tags, and nesting.** Most HTML is made of elements with an opening tag and
 a matching closing tag (note the `/`), wrapping some content:
@@ -115,6 +125,14 @@ does this for free.
 (and every tool downstream of it) can only treat something like a text input, a
 button, or a heading if the markup actually says so — a `<div>` is not "waiting" to
 become an input; it never will become one, no matter how it's styled.
+
+**One thing worth heading off now**: this isn't "never use `<div>`." `<div>` (and its
+inline cousin `<span>`) are genuinely correct, useful elements — a generic container
+with no semantic meaning of its own, exactly right for a styling/layout hook that
+doesn't correspond to anything more specific (a wrapper for CSS Grid, say — Module 2
+uses plenty). `bad-example.html` is bad because it used `<div>` in place of `<form>`,
+`<label>`, and `<button>`, where a specific, correct element already existed for the
+job — not because `<div>` itself is wrong.
 
 ### Prove it with the accessibility tree, not just eyes
 
