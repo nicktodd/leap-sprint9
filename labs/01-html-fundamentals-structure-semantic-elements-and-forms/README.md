@@ -2,8 +2,11 @@
 
 ## Setup
 
-No build tools, no npm, nothing to install. Open `index.html` directly in a browser
-(double-click it, or drag it into a browser window) to check your work as you go.
+No build tools, no npm, nothing to install. Edit `index.html` in any plain-text editor
+(VS Code is fine — never a word processor like Word, which saves formatting you don't
+want). Open the file directly in a browser (double-click it, or drag it into a browser
+window) to check your work as you go — no server needed, the `.html` file is the
+finished thing.
 
 ## Task
 
