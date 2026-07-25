@@ -47,7 +47,7 @@ pattern as every previous sprint.
 | # | Module | Lab |
 |---|---|---|
 | 1 | HTML Fundamentals: Structure, Semantic Elements & Forms | [labs/01-html-fundamentals-structure-semantic-elements-and-forms/README.md](labs/01-html-fundamentals-structure-semantic-elements-and-forms/README.md) |
-| 2 | CSS Fundamentals: Selectors, the Box Model & Layout | _coming soon_ |
+| 2 | CSS Fundamentals: Selectors, the Box Model & Layout | [labs/02-css-fundamentals-selectors-the-box-model-and-layout/README.md](labs/02-css-fundamentals-selectors-the-box-model-and-layout/README.md) |
 | 3 | JavaScript in the Browser: The DOM, Events & the Window Object | _coming soon_ |
 | 4 | Fetch & Browser HTTP: Calling a Real API Without a Framework | _coming soon_ |
 | 5 | The Full Stack So Far & Where Angular Fits | [labs/05-the-full-stack-so-far-and-where-angular-fits/README.md](labs/05-the-full-stack-so-far-and-where-angular-fits/README.md) |
