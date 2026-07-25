@@ -35,6 +35,10 @@ pattern as every previous sprint.
 - `demos/<module>/` — instructor-led demo assets and guides
 - `labs/<module>/` — your starter files and the task README for that module
 - `solutions/<module>/` — reference solutions (try the lab first!)
+- `solutions/mission-ui/` — from Module 7 onward, the one canonical Angular project that
+  `solutions/07-.../` through `solutions/17-.../` build up incrementally, module by module.
+  Your own `mission-ui` (scaffolded per Module 7) is where you keep building — this is the
+  instructor-facing answer key, not something you clone directly.
 
 ## Getting started
 
@@ -52,7 +56,7 @@ pattern as every previous sprint.
 | 4 | Fetch & Browser HTTP: Calling a Real API Without a Framework | [labs/04-fetch-and-browser-http-calling-a-real-api-without-a-framework/README.md](labs/04-fetch-and-browser-http-calling-a-real-api-without-a-framework/README.md) |
 | 5 | The Full Stack So Far & Where Angular Fits | [labs/05-the-full-stack-so-far-and-where-angular-fits/README.md](labs/05-the-full-stack-so-far-and-where-angular-fits/README.md) |
 | 6 | Angular Fundamentals: Framework Overview & What Makes It Different from React | [labs/06-angular-fundamentals-framework-overview-and-what-makes-it-different-from-react/README.md](labs/06-angular-fundamentals-framework-overview-and-what-makes-it-different-from-react/README.md) |
-| 7 | Angular Project Structure, Dev Server & Build Tooling | _coming soon_ |
+| 7 | Angular Project Structure, Dev Server & Build Tooling | [labs/07-angular-project-structure-dev-server-and-build-tooling/README.md](labs/07-angular-project-structure-dev-server-and-build-tooling/README.md) |
 | 8 | Components & Templates: Standalone Components & Signals | _coming soon_ |
 | 9 | Services & Dependency Injection in Angular | _coming soon_ |
 | 10 | HTTP Communication: HttpClient, Observables & Error Handling | _coming soon_ |
