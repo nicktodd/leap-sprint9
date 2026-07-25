@@ -1,6 +1,6 @@
 # Module 2 Demo Guide — CSS Fundamentals: Selectors, the Box Model & Layout
 
-**Duration:** 20 minutes
+**Duration:** 30 minutes
 **Prerequisite:** Module 1's login page.
 
 Module 1 said plainly: HTML describes structure and content, not how a page looks.
@@ -35,6 +35,45 @@ in order of how much you should actually use them:
 Open `login-page.html` and point at the `<link>` tag in `<head>` — that's the entire
 connection to `styles.css`. Nothing else wires them together.
 
+## Part 0.5: The Structure of a Stylesheet (2 min)
+
+A CSS file is a sequence of *rules*. Each rule is a selector plus a declaration block:
+
+```css
+selector {
+  property: value;
+  property: value;
+}
+```
+
+Point at a real rule in `styles.css`:
+
+```css
+.field label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #333;
+}
+```
+
+`.field label` is the *selector*; everything inside `{ }` is the *declaration block*;
+each `property: value;` line is one *declaration*. That's the entire vocabulary — every
+CSS file, however large, is built from nothing but rules made of declarations.
+
+**Comments**: `/* like this */` — the same idea as HTML's `<!-- -->`, ignored by the
+browser, notes for humans. `styles.css` already uses these to explain *why* a rule
+exists, not just *what* it does — the box-sizing comment at the top is a good example.
+
+**@-rules**: anything starting with `@` does something other than "style a selector."
+`@media` (Part 5) wraps a whole block behind a condition; other @-rules exist
+(`@import` pulls in another stylesheet, `@font-face` defines a custom font) but aren't
+needed today.
+
+**File order matters, too — not just specificity**: when two rules have *equal*
+specificity, the one written *later* in the file wins. Part 1's specificity example
+had rules of different specificity, so order didn't matter there; when specificity
+ties, order is the tiebreaker.
+
 ## Part 1: Selectors & Specificity (4 min)
 
 Three basic selector types, all real, all in `styles.css`:
@@ -65,7 +104,77 @@ beats class beats element, and inline `style="..."` beats all three. This is exa
 why inline styles are trouble: nothing in an external stylesheet can ever out-specify
 them without resorting to `!important`, which just moves the problem.
 
-## Part 2: The Box Model (5 min)
+## Part 2: Colour, Backgrounds & Text (5 min)
+
+Every property so far has been about *position*. Now the properties that actually make
+a page look designed. Open `colors-fonts-demo.html`:
+
+![Colour formats and font comparisons, rendered](screenshots/colors-fonts-demo.png)
+
+**Colour has three common formats** — all valid, all used in real projects:
+
+```css
+color: steelblue;              /* 1. named - ~150 exist, easy to read */
+color: #1e6fa8;                 /* 2. hex - most common in real projects */
+color: rgb(30, 111, 168);       /* 3. rgb() - identical to the hex above */
+background: rgba(30, 111, 168, 0.5);  /* rgba() adds ALPHA: 0 = invisible, 1 = solid */
+```
+
+The hex swatch and the `rgb()` swatch in the screenshot are the *exact same colour* —
+two notations for one value. `rgba()`'s fourth number is the only way to get real
+transparency; the chequered background showing through the fourth swatch is that alpha
+channel, verified, not simulated.
+
+**`color` vs `background`** — easy to mix up by name alone:
+
+```css
+header {
+  background: #0a2c24;   /* the element's OWN background */
+  color: white;           /* the TEXT colour inside it */
+}
+```
+
+This is a real rule from `styles.css` — that's why the header is dark green with white
+text, not the other way round.
+
+**Fonts** — also real rules from `styles.css`:
+
+```css
+font-family: system-ui, sans-serif;
+```
+
+`system-ui` is the operating system's own native UI font — no download, renders
+instantly, looks "native" on whatever device it's viewed on. `sans-serif` is a
+*fallback*: if a browser doesn't recognise `system-ui`, it falls back to any generic
+sans-serif font rather than showing nothing. This comma-separated list is called a
+*font stack*. The demo screenshot's second and third lines of text show two other
+families entirely (`Georgia, serif` and `"Courier New", monospace`) for contrast.
+
+```css
+.field label {
+  font-size: 0.875rem;   /* relative to the ROOT element's font size */
+}
+```
+
+`rem` scales if a user changes their browser's default text size (an accessibility
+setting); a fixed `px` value never would. `styles.css` uses `rem` for every
+`font-size` for exactly this reason — worth pointing out as a deliberate choice, not
+an accident.
+
+```css
+font-weight: 600;   /* 400 = normal, 700 = bold - numbers give finer control */
+```
+
+The demo screenshot's three weight lines (300/400/700) show visibly different
+boldness from the same font family — `font-weight` is independent of which font is
+loaded.
+
+One more real property, purely visual, *not* part of the box model despite sitting
+right next to `border`: `border-radius: 8px;` on `form` — rounds the corners. It
+doesn't add space like padding/margin do; it just changes the shape of the box that's
+already there.
+
+## Part 3: The Box Model (5 min)
 
 Every element on a page is a box with four layers, from the inside out. Open
 `box-model-demo.html`:
@@ -92,7 +201,7 @@ number you get. Point at `form { max-width: 360px; padding: 32px; }` in the real
 stylesheet: without `border-box`, that form would render 64px wider than 360px (32px
 padding on each side). With it, 360px means 360px.
 
-## Part 3: Layout With Flexbox (5 min)
+## Part 4: Layout With Flexbox (5 min)
 
 Open `styles.css`'s `main` rule:
 
@@ -128,7 +237,7 @@ Verified real output, the whole page together:
 
 ![The styled login page at desktop width](screenshots/login-desktop.png)
 
-## Part 4: Responsive Basics — Media Queries (3 min)
+## Part 5: Responsive Basics — Media Queries (3 min)
 
 `styles.css` ends with one breakpoint:
 
@@ -157,13 +266,42 @@ Verified real output, the same file, same CSS, a narrower viewport:
 Nothing in the HTML changed. Nothing in the *rest* of the CSS changed. One `@media`
 block is the entire difference between these two screenshots.
 
+## Part 6: Best Practices for Managing Styles (3 min)
+
+A handful of habits that matter more as a stylesheet grows past one page:
+
+- **Prefer classes over ids for styling.** `#login-form` exists in the HTML, but
+  `styles.css` never actually styles *by* that id — deliberately. Ids carry heavy
+  specificity that's hard to override later (Part 1), and are better reserved for
+  unique hooks — JavaScript will grab this exact one in Module 3.
+- **Avoid `!important`.** It doesn't fix a specificity conflict, it ends the
+  conversation by force — the next `!important` (or a browser extension, or a
+  different developer six months from now) has to fight it too. Fix the selector
+  instead.
+- **Keep a consistent order in the file.** `styles.css` follows a common shape: reset
+  first (`box-sizing`), then page-level layout (`body`, `header`, `main`, `footer`),
+  then components (`form`, `.field`, `button`), then responsive overrides *last*. A
+  stylesheet that follows one predictable order is far easier to scan than one where
+  rules appear in whatever sequence they were written.
+- **Be consistent with units.** `rem` for anything text-related (respects a user's
+  accessibility settings); `px` for things that genuinely should never scale, like a
+  1px hairline border. Mixing them arbitrarily makes a stylesheet's behaviour
+  unpredictable.
+- **Name classes for what something *is*, not what it currently looks like.** `.field`
+  describes a form field's role. If the design later changes the colour scheme,
+  `.field` still reads correctly; a class called `.blue-box` would immediately become
+  a lie the moment the design changed.
+- **BEM** (Block\_\_Element--Modifier) is one common naming convention for larger
+  projects — worth knowing the name if it shows up in a real codebase, even though a
+  page this size doesn't need it.
+
 ## Key message
 
 Every visual decision today came from a small, composable set of tools: a selector to
-target something, a box-model property to space it, a flex property to position it,
-and a media query to adapt it — not from trial-and-error pixel-pushing. Module 8
-(Angular components) will style pieces of a page the same way, just scoped to one
-component instead of a whole file.
+target something, a colour/font property to style it, a box-model property to space
+it, a flex property to position it, and a media query to adapt it — not from
+trial-and-error pixel-pushing. Module 8 (Angular components) will style pieces of a
+page the same way, just scoped to one component instead of a whole file.
 
 ## Transition to the Lab
 

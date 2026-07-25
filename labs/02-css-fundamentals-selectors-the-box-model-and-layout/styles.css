@@ -75,6 +75,13 @@ form h2 {
   font-size: 1rem;
 }
 
+/*
+  TODO 4: Choose your own accent colour.
+  Replace this button's background (and header's background, above)
+  with a colour of your choice - named, hex, or rgb(), your call.
+  Keep color: white below, and check the text is still comfortably
+  readable against whatever background you pick.
+*/
 button {
   padding: 12px;
   background: #1e6fa8;
@@ -93,7 +100,7 @@ footer {
 }
 
 /*
-  TODO 4: Responsive breakpoint.
+  TODO 5: Responsive breakpoint.
   Add an @media (max-width: 480px) block. Inside it, set main's
   padding to 0, and on form: max-width: none, border: none, and
   border-radius: 0 - so the card goes edge-to-edge on a narrow
