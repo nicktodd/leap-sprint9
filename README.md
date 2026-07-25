@@ -49,7 +49,7 @@ pattern as every previous sprint.
 | 1 | HTML Fundamentals: Structure, Semantic Elements & Forms | [labs/01-html-fundamentals-structure-semantic-elements-and-forms/README.md](labs/01-html-fundamentals-structure-semantic-elements-and-forms/README.md) |
 | 2 | CSS Fundamentals: Selectors, the Box Model & Layout | [labs/02-css-fundamentals-selectors-the-box-model-and-layout/README.md](labs/02-css-fundamentals-selectors-the-box-model-and-layout/README.md) |
 | 3 | JavaScript in the Browser: The DOM, Events & the Window Object | [labs/03-javascript-in-the-browser-the-dom-events-and-the-window-object/README.md](labs/03-javascript-in-the-browser-the-dom-events-and-the-window-object/README.md) |
-| 4 | Fetch & Browser HTTP: Calling a Real API Without a Framework | _coming soon_ |
+| 4 | Fetch & Browser HTTP: Calling a Real API Without a Framework | [labs/04-fetch-and-browser-http-calling-a-real-api-without-a-framework/README.md](labs/04-fetch-and-browser-http-calling-a-real-api-without-a-framework/README.md) |
 | 5 | The Full Stack So Far & Where Angular Fits | [labs/05-the-full-stack-so-far-and-where-angular-fits/README.md](labs/05-the-full-stack-so-far-and-where-angular-fits/README.md) |
 | 6 | Angular Fundamentals: Framework Overview & What Makes It Different from React | _coming soon_ |
 | 7 | Angular Project Structure, Dev Server & Build Tooling | _coming soon_ |
