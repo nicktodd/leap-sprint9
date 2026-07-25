@@ -51,7 +51,7 @@ pattern as every previous sprint.
 | 3 | JavaScript in the Browser: The DOM, Events & the Window Object | [labs/03-javascript-in-the-browser-the-dom-events-and-the-window-object/README.md](labs/03-javascript-in-the-browser-the-dom-events-and-the-window-object/README.md) |
 | 4 | Fetch & Browser HTTP: Calling a Real API Without a Framework | [labs/04-fetch-and-browser-http-calling-a-real-api-without-a-framework/README.md](labs/04-fetch-and-browser-http-calling-a-real-api-without-a-framework/README.md) |
 | 5 | The Full Stack So Far & Where Angular Fits | [labs/05-the-full-stack-so-far-and-where-angular-fits/README.md](labs/05-the-full-stack-so-far-and-where-angular-fits/README.md) |
-| 6 | Angular Fundamentals: Framework Overview & What Makes It Different from React | _coming soon_ |
+| 6 | Angular Fundamentals: Framework Overview & What Makes It Different from React | [labs/06-angular-fundamentals-framework-overview-and-what-makes-it-different-from-react/README.md](labs/06-angular-fundamentals-framework-overview-and-what-makes-it-different-from-react/README.md) |
 | 7 | Angular Project Structure, Dev Server & Build Tooling | _coming soon_ |
 | 8 | Components & Templates: Standalone Components & Signals | _coming soon_ |
 | 9 | Services & Dependency Injection in Angular | _coming soon_ |
