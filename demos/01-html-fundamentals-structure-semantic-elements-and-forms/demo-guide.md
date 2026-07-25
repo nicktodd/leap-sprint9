@@ -24,15 +24,24 @@ where HTML's name comes from:
 <a href="https://example.com">a link</a>
 ```
 
-**Elements, tags, and nesting.** Most HTML is made of elements with an opening tag and
-a matching closing tag (note the `/`), wrapping some content:
+**Elements.** An HTML *element* is the fundamental unit of the page: an opening tag,
+whatever it wraps, and a matching closing tag (note the `/`) — all three together make
+one element. A tag on its own is just a marker; the element is the whole thing:
 
 ```html
-<h1>Mission Control</h1>
+<html>
+  <body>
+    <h1>Mission Control</h1>
+  </body>
+</html>
 ```
 
-`<h1>` opens, `Mission Control` is the content, `</h1>` closes. Elements nest inside
-each other, forming a tree:
+`<h1>Mission Control</h1>` is one element — `<h1>` opens it, `Mission Control` is its
+content, `</h1>` closes it. `<body>...</body>` is a second element, and it *contains*
+the `<h1>` element. `<html>...</html>` is a third — the outermost element of every HTML
+page, the "root" everything else lives inside (Part 1 covers exactly what goes in it).
+
+Elements nest inside each other like this, forming a tree:
 
 ```html
 <form>
