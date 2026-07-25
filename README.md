@@ -60,7 +60,7 @@ pattern as every previous sprint.
 | 7 | Angular Project Structure, Dev Server & Build Tooling | [labs/07-angular-project-structure-dev-server-and-build-tooling/README.md](labs/07-angular-project-structure-dev-server-and-build-tooling/README.md) |
 | 8 | Components & Templates: Standalone Components & Signals | [labs/08-components-and-templates-standalone-components-and-signals/README.md](labs/08-components-and-templates-standalone-components-and-signals/README.md) |
 | 9 | Services & Dependency Injection in Angular | [labs/09-services-and-dependency-injection-in-angular/README.md](labs/09-services-and-dependency-injection-in-angular/README.md) |
-| 10 | HTTP Communication: HttpClient, Observables & Error Handling | _coming soon_ |
+| 10 | HTTP Communication: HttpClient, Observables & Error Handling | [labs/10-http-communication-httpclient-observables-and-error-handling/README.md](labs/10-http-communication-httpclient-observables-and-error-handling/README.md) |
 | 11 | Connecting to the Spring Boot Backend: First Real API Call | _coming soon_ |
 | 12 | OpenAPI-Generated API Clients | _coming soon_ |
 | 13 | Reactive Forms: Building, Submitting & Handling Responses | _coming soon_ |
