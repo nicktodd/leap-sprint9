@@ -57,7 +57,7 @@ pattern as every previous sprint.
 | 5 | The Full Stack So Far & Where Angular Fits | [labs/05-the-full-stack-so-far-and-where-angular-fits/README.md](labs/05-the-full-stack-so-far-and-where-angular-fits/README.md) |
 | 6 | Angular Fundamentals: Framework Overview & What Makes It Different from React | [labs/06-angular-fundamentals-framework-overview-and-what-makes-it-different-from-react/README.md](labs/06-angular-fundamentals-framework-overview-and-what-makes-it-different-from-react/README.md) |
 | 7 | Angular Project Structure, Dev Server & Build Tooling | [labs/07-angular-project-structure-dev-server-and-build-tooling/README.md](labs/07-angular-project-structure-dev-server-and-build-tooling/README.md) |
-| 8 | Components & Templates: Standalone Components & Signals | _coming soon_ |
+| 8 | Components & Templates: Standalone Components & Signals | [labs/08-components-and-templates-standalone-components-and-signals/README.md](labs/08-components-and-templates-standalone-components-and-signals/README.md) |
 | 9 | Services & Dependency Injection in Angular | _coming soon_ |
 | 10 | HTTP Communication: HttpClient, Observables & Error Handling | _coming soon_ |
 | 11 | Connecting to the Spring Boot Backend: First Real API Call | _coming soon_ |
