@@ -30,8 +30,8 @@ Built and run for real (`solutions/mission-ui`, `Holdings` service + `HoldingsSu
 
 ## The Reflection Questions
 
-**Why `inject(Holdings)` in two unrelated components returns the same instance**: `@Service()`
-(and `@Injectable({ providedIn: 'root' })`, which does the same thing) registers the class
+**Why `inject(Holdings)` in two unrelated components returns the same instance**:
+`@Injectable({ providedIn: 'root' })` registers the class
 with Angular's **root injector** — a single injector instance shared by the entire
 application. The first time anything asks for `Holdings` (via `inject()` or a constructor
 parameter), the root injector constructs *one* instance and caches it. Every subsequent

@@ -6,7 +6,7 @@ The canonical `solutions/mission-ui/` project (repo root, alongside `demos/`/`la
 `solutions/`) is exactly the result of running the scaffold command with nothing added yet —
 confirmed by actually running it during this module's demo build:
 
-- `npx @angular/cli@latest new mission-ui --routing --style=css --ssr=false --skip-git`
+- `npx @angular/cli@21 new mission-ui --routing --style=css --ssr=false --skip-git`
   completed with a real `npm install`, producing `angular.json`, `package.json`,
   `src/main.ts`, `src/app/app.ts`, `src/app/app.html`, `src/app/app.css`,
   `src/app/app.config.ts`, `src/app/app.routes.ts`.

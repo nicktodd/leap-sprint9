@@ -6,8 +6,11 @@
 > and `dist/` are gitignored; run `npm install` before `ng serve`/`ng build`. Learners scaffold
 > their own copy per `labs/07-.../README.md` and keep building in it for the rest of the sprint
 > — this folder is the instructor-facing answer key, not something learners clone directly.
+>
+> Pinned to **Angular 21** and **TypeScript 5.9** (not the latest Angular 22/TS 6.0) —
+> deliberately, to match this cohort's required toolchain.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.8.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.19.
 
 ## Development server
 

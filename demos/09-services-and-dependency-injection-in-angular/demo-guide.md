@@ -2,6 +2,7 @@
 
 **Duration:** 30 minutes
 **Prerequisite:** Module 8's `HoldingsSummary` component, holding its own local signal state.
+Angular 21, TypeScript 5.9 (this sprint's pinned toolchain).
 
 Module 8 built one component that owns its own state. Today asks the obvious next question:
 what happens when a *second* component needs the same data?
@@ -31,22 +32,26 @@ CREATE src/app/holdings.ts (82 bytes)
 Open the generated file:
 
 ```typescript
-import { Service } from '@angular/core';
+import { Injectable } from '@angular/core';
 
-@Service()
+@Injectable({
+  providedIn: 'root',
+})
 export class Holdings {}
 ```
 
-Worth calling out explicitly: current Angular generates `@Service()`, a genuinely new
-decorator. Nearly every existing tutorial, Stack Overflow answer, and real codebase still
-uses `@Injectable({ providedIn: 'root' })` — both are real, both are documented, and both do
-the same job here. `@Service()` is simply what this CLI version now scaffolds by default.
-Recognise both; expect to see `@Injectable` far more often in the wild for now.
+`@Injectable` is the decorator that makes a class eligible for dependency injection at all;
+`providedIn: 'root'` tells Angular to create exactly one instance for the whole application
+(the root injector) rather than requiring it to be listed in every component that needs it.
+Worth a brief aside: very recent Angular versions (22+) also ship a newer `@Service()`
+decorator that does the same job with a shorter name — this sprint targets Angular 21, where
+`@Injectable` is what the CLI generates and what the overwhelming majority of existing
+tutorials, Stack Overflow answers, and real codebases still use.
 
 ## Part 2: Moving the State In (8 min)
 
 ```typescript
-import { Service, signal, computed } from '@angular/core';
+import { Injectable, signal, computed } from '@angular/core';
 
 export interface Holding {
   ticker: string;
@@ -54,7 +59,9 @@ export interface Holding {
   price: number;
 }
 
-@Service()
+@Injectable({
+  providedIn: 'root',
+})
 export class Holdings {
   private readonly holdings = signal<Holding[]>([
     { ticker: 'ULVR.L', quantity: 500, price: 42.1 },
@@ -130,9 +137,9 @@ export class PortfolioBadge {
 ```
 
 Add `<app-portfolio-badge />` to the header in `app.html`, alongside
-`<app-holdings-summary />` in `main`. Both components call `inject(Holdings)` — Angular's
-`providedIn: 'root'` behaviour (the default for `@Service()`) means both get the *exact same
-instance*, not two separate copies.
+`<app-holdings-summary />` in `main`. Both components call `inject(Holdings)` — the
+`providedIn: 'root'` in `@Injectable`'s config means both get the *exact same instance*,
+not two separate copies.
 
 Verified real output, before and after clicking "Add BP.L" in the holdings list:
 

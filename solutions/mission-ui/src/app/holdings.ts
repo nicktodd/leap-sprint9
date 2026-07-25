@@ -1,4 +1,4 @@
-import { Service, signal, computed } from '@angular/core';
+import { Injectable, signal, computed } from '@angular/core';
 
 export interface Holding {
   ticker: string;
@@ -6,7 +6,9 @@ export interface Holding {
   price: number;
 }
 
-@Service()
+@Injectable({
+  providedIn: 'root',
+})
 export class Holdings {
   private readonly holdings = signal<Holding[]>([
     { ticker: 'ULVR.L', quantity: 500, price: 42.1 },

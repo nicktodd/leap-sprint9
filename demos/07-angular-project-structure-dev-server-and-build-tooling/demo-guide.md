@@ -3,6 +3,8 @@
 **Duration:** 25 minutes
 **Prerequisite:** Module 6's conceptual read-through. Node.js 22.22.3+ or 24.15.0+ and the
 Angular CLI (`npm install -g @angular/cli`, or use `npx @angular/cli` as this demo does).
+This sprint targets **Angular 21** and **TypeScript 5.9** specifically, not whatever's
+newest — pin the CLI version explicitly (`npx @angular/cli@21`) rather than `@latest`.
 
 Module 6 read Angular code without running it. Today scaffolds a real, running project for
 the first time — no hand-written `index.html` this time, the CLI generates it.
@@ -10,7 +12,7 @@ the first time — no hand-written `index.html` this time, the CLI generates it.
 ## Part 0: Scaffolding With the CLI, Live (5 min)
 
 ```bash
-npx @angular/cli@latest new mission-ui --routing --style=css --ssr=false --skip-git
+npx @angular/cli@21 new mission-ui --routing --style=css --ssr=false --skip-git
 ```
 
 Run it live, let the real output scroll: `CREATE mission-ui/angular.json`,

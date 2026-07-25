@@ -3,7 +3,9 @@
 ## Setup
 
 Node.js 22.22.3+ or 24.15.0+ and npm (check with `node --version`). The Angular CLI itself
-doesn't need a separate global install — `npx @angular/cli` downloads and runs it on demand,
+doesn't need a separate global install — `npx @angular/cli@21` downloads and runs it on
+demand, pinned to Angular 21 (this sprint's required version, paired with TypeScript 5.9) so
+`npx @angular/cli` alone doesn't silently grab whatever's newest,
 exactly as today's demo did.
 
 ## Task
@@ -15,7 +17,7 @@ a location you'll keep coming back to for the next ten modules.
 1. Run the exact command from today's demo:
 
    ```bash
-   npx @angular/cli@latest new mission-ui --routing --style=css --ssr=false --skip-git
+   npx @angular/cli@21 new mission-ui --routing --style=css --ssr=false --skip-git
    ```
 
 2. Once it finishes (a real `npm install` runs as part of scaffolding — this takes a minute),

@@ -7,7 +7,8 @@ with Angular**, week 9 of the Fidelity LEAP graduate programme.
 
 - Node.js 22.22.3+ or 24.15.0+ (the Angular CLI will refuse to run on older Node 22.x patch
   versions) and npm
-- Angular CLI (`npm install -g @angular/cli`, or use `npx @angular/cli`)
+- Angular CLI, pinned to **Angular 21** (`npm install -g @angular/cli@21`, or use
+  `npx @angular/cli@21`) — paired with **TypeScript 5.9**, not the newest Angular/TS release
 - TypeScript from Sprint 8 (interfaces, generics, decorators) — assumed, not re-taught
 - No prior HTML, CSS, or browser JavaScript experience assumed — Day 1 builds this from
   zero, before Angular is introduced at all
