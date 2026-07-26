@@ -66,7 +66,7 @@ pattern as every previous sprint.
 | 13 | Reactive Forms: Building, Submitting & Handling Responses | [labs/13-reactive-forms-building-submitting-and-handling-responses/README.md](labs/13-reactive-forms-building-submitting-and-handling-responses/README.md) |
 | 14 | Routing Fundamentals: Routes, Lazy Loading & Navigation | [labs/14-routing-fundamentals-routes-lazy-loading-and-navigation/README.md](labs/14-routing-fundamentals-routes-lazy-loading-and-navigation/README.md) |
 | 15 | Building Authenticated Flows: Login, JWT Interceptors & Route Guards | [labs/15-building-authenticated-flows-login-jwt-interceptors-and-route-guards/README.md](labs/15-building-authenticated-flows-login-jwt-interceptors-and-route-guards/README.md) |
-| 16 | Testing Angular: Unit Tests & End-to-End Tests with Playwright | _coming soon_ |
+| 16 | Testing Angular: Unit Tests & End-to-End Tests with Playwright | [labs/16-testing-angular-unit-tests-and-end-to-end-tests-with-playwright/README.md](labs/16-testing-angular-unit-tests-and-end-to-end-tests-with-playwright/README.md) |
 | 17 | Mission Build: Wiring Up Remaining Features, UX Review & Sprint 9 Wrap-up | _coming soon_ |
 
 ## Support
