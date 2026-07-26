@@ -106,6 +106,14 @@ The first version of this code used `error.message` directly — which produced 
 object there. Reading `error.error?.message` is what surfaces the real
 `cannot sell more than the current holding` text instead of a generic HTTP status line.
 
+**A caution worth stating explicitly**: displaying `error.error.message` directly in a
+template is only safe here because `GlobalExceptionHandler` was deliberately written to
+return short, curated strings — never a stack trace, a SQL fragment, an internal file path,
+or a secret. A server's error response is visible to *anyone* calling that API, not just this
+UI. Before wiring a server's error message straight into a template on a real project, always
+check what the server actually puts in that field — don't assume it's safe to print just
+because it happens to be convenient here.
+
 ## Key message
 
 A reactive form's validators and a server's business rules solve two different problems, and
