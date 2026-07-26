@@ -34,7 +34,7 @@ directly with Sprint 6, Module 5's `order-service.yaml` — a **hand-written**, 
 spec for a *different*, never-built endpoint shape (`GET /orders/{id}`). That file describes
 what someone once *intended*; today's spec describes what's *actually running*.
 
-## Part 1: Two Small, Honest Annotations (5 min)
+## Part 1: Two Small Server-Side Annotations (5 min)
 
 Two real gaps needed fixing before the generated client would work correctly — not skipped,
 fixed on the server, the same way Module 4 and Module 11 fixed real CORS gaps:
@@ -56,7 +56,7 @@ public ResponseEntity<OrderResponseDto> submitOrder(...) { ... }
 
 Verified, not guessed: without `produces = APPLICATION_JSON_VALUE`, the generated client
 defensively treated the response as an untyped `blob`, and every field came back `undefined`
-in the browser — a genuinely broken first attempt, fixed by adding the one annotation Spring
+in the browser — a real broken first attempt, fixed by adding the one annotation Spring
 should have had all along. This is real OpenAPI-generation feedback: the generator can only
 be as accurate as what the server actually declares.
 
@@ -119,7 +119,7 @@ this code a person had to write by hand*.
 A generated client isn't a different way of calling HTTP — it's the same `HttpClient`
 underneath, with the URL, method, request body shape, and response shape all derived
 automatically from a spec the server itself produces. The real payoff showed up today as a
-genuine bug: a missing `produces` annotation broke the generated client in a way a
+real bug: a missing `produces` annotation broke the generated client in a way a
 hand-written call (Module 11) would never have hit, because a hand-written call never had to
 *infer* the response type from a declared content type — it just assumed JSON. That's the
 trade a typed, generated client makes: much less code to write, but the server's own

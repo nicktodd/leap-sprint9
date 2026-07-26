@@ -43,7 +43,7 @@ under-declares itself.
 
 **The staleness risk**: this is the same underlying risk as a hand-written interface going
 stale — both describe a shape by hand (well, in this case, by tool) at one point in time,
-and both can silently disagree with reality later if nobody re-syncs them. What's genuinely
+and both can silently disagree with reality later if nobody re-syncs them. What's actually
 different is the *failure mode* when they drift: a hand-written interface that's gone stale
 still compiles and runs, silently accepting or losing fields at runtime with no signal
 anything's wrong. A generated client regenerated against a *newer* real spec, by contrast,
