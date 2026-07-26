@@ -1,7 +1,7 @@
-# Fidelity LEAP Program — Sprint 9 Lab Exercises
+# LEAP Program — Sprint 9 Lab Exercises
 
 This repository contains the hands-on lab exercises accompanying **Sprint 9: UI Development
-with Angular**, week 9 of the Fidelity LEAP graduate programme.
+with Angular**, week 9 of the LEAP graduate programme.
 
 ## Prerequisites
 
