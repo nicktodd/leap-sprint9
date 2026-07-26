@@ -35,19 +35,6 @@ export class Holdings {
     this.holdings.update((current) => current.filter((h) => h.ticker !== ticker));
   }
 
-  // Sets a holding's quantity to an authoritative value from the backend
-  // (e.g. after an order), rather than adding on top of a possibly-stale
-  // local figure. Adds the ticker if it wasn't already held.
-  setQuantity(ticker: string, quantity: number, price: number): void {
-    this.holdings.update((current) => {
-      const existing = current.find((h) => h.ticker === ticker);
-      if (existing) {
-        return current.map((h) => (h.ticker === ticker ? { ...h, quantity, price } : h));
-      }
-      return [...current, { ticker, quantity, price }];
-    });
-  }
-
   loadFromApi(url: string): void {
     this.http
       .get<Holding[]>(url)

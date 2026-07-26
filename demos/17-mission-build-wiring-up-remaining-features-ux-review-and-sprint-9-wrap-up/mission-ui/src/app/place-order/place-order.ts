@@ -14,7 +14,6 @@ export class PlaceOrder {
 
   protected readonly lastOrder = this.missionApi.lastOrder;
   protected readonly error = this.missionApi.error;
-  protected readonly submitting = this.missionApi.submitting;
 
   // Client-side validation - the same instincts Day 1's native HTML forms
   // taught (required, minimum values), just expressed through Angular's

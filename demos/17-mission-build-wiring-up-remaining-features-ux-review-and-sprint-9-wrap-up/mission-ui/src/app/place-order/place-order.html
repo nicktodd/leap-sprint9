@@ -39,9 +39,7 @@
       </select>
     </div>
 
-    <button type="submit" [disabled]="submitting()">
-      {{ submitting() ? 'Submitting...' : 'Submit Order' }}
-    </button>
+    <button type="submit">Submit Order</button>
   </form>
 
   @if (error()) {
